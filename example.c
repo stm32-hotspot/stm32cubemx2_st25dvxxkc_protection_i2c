@@ -18,7 +18,7 @@
 #include "st25dvxxkc.h"
 #include "stdio.h"
 #include "mx_st25dvxxkc.h"
-
+#include "basic_stdio_itf_io.h"
 /* Private typedef -----------------------------------------------------------*/
 
 /* Private define ------------------------------------------------------------*/
@@ -160,31 +160,31 @@ app_status_t app_init(void)
     memindex = (((st25dvxxkcbmsize / 4) + 1) * (cnt - 1));
 
     sprintf(uartmsg, "\n\r\n\rStart writing Zone %d", cnt);
-    PRINTF(uartmsg);
+    PRINTF("%s", uartmsg);
     ret = st25dvxxkc_drv_writedata(&obj, &writedata, memindex, 1);
     if (ret != NFCTAG_OK)
     {
       sprintf(uartmsg, "\n\rWrite Zone %d protected, need i2c password", cnt);
-      PRINTF(uartmsg);
+      PRINTF("%s", uartmsg);
     }
     else
     {
       sprintf(uartmsg, "\n\rWrite Zone %d done", cnt);
-      PRINTF(uartmsg);
+      PRINTF("%s", uartmsg);
     }
 
     sprintf(uartmsg, "\n\r\n\rStart reading Zone %d", cnt);
-    PRINTF(uartmsg);
+    PRINTF("%s", uartmsg);
     ret = st25dvxxkc_drv_readdata(&obj, &readdata, memindex, 1);
     if (readdata == 0xFF)
     {
       sprintf(uartmsg, "\n\rRead Zone %d protected, need i2c password", cnt);
-      PRINTF(uartmsg);
+      PRINTF("%s", uartmsg);
     }
     else
     {
       sprintf(uartmsg, "\n\rRead Zone %d done", cnt);
-      PRINTF(uartmsg);
+      PRINTF("%s", uartmsg);
     }
   }
 
@@ -202,31 +202,31 @@ app_status_t app_init(void)
     memindex = (((st25dvxxkcbmsize / 4) + 1) * (cnt - 1));
 
     sprintf(uartmsg, "\n\r\n\rStart writing Zone %d", cnt);
-    PRINTF(uartmsg);
+    PRINTF("%s", uartmsg);
     ret = st25dvxxkc_drv_writedata(&obj, &writedata, memindex, 1);
     if (ret != NFCTAG_OK)
     {
       sprintf(uartmsg, "\n\rWrite Zone %d protected, need i2c password", cnt);
-      PRINTF(uartmsg);
+      PRINTF("%s", uartmsg);
     }
     else
     {
       sprintf(uartmsg, "\n\rWrite Zone %d done", cnt);
-      PRINTF(uartmsg);
+      PRINTF("%s", uartmsg);
     }
 
     sprintf(uartmsg, "\n\r\n\rStart reading Zone %d", cnt);
-    PRINTF(uartmsg);
+    PRINTF("%s", uartmsg);
     ret = st25dvxxkc_drv_readdata(&obj, &readdata, memindex, 1);
     if (readdata == 0xFF)
     {
       sprintf(uartmsg, "\n\rRead Zone %d protected, need i2c password", cnt);
-      PRINTF(uartmsg);
+      PRINTF("%s", uartmsg);
     }
     else
     {
       sprintf(uartmsg, "\n\rRead Zone %d done", cnt);
-      PRINTF(uartmsg);
+      PRINTF("%s", uartmsg);
     }
   }
 

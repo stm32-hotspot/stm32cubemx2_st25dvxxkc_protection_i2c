@@ -6,15 +6,15 @@ This example demonstrates how to use the ST25DV64KC part driver with STM32CubeMX
 
 # Update history
 
-<label for="collapse-v-1-0-0" aria-hidden="true">**1.0.0 / 22-July-2026**</label>
+<label for="collapse-v-1-0-1" aria-hidden="true">**1.0.1 / 14-September-2026**</label>
 <div>
 
 
 ## Main changes
 
-### First release
+### Patch release
 
-Initial release of the ST25DV64KC protection_i2c example for STM32CubeMX2.
+Removed the CMake warning generated while configuring the example project.
 
 ## Known limitations
 
@@ -22,7 +22,7 @@ No limitation raised for this example.
 
 ## Dependencies
 
-Configuration and code generation features require STM32CubeMX2 >= 1.0.0.
+Configuration and code generation features require STM32CubeMX2 >= 1.1.0.
 
 </div>
 
